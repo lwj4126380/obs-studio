@@ -24,6 +24,7 @@ find_package(Libx264 QUIET)
 find_package(Libfdk QUIET)
 find_package(ssl QUIET)
 find_package(Qt5Core QUIET)
+find_package(Qt5Multimedia QUIET)
 
 file(GLOB FFMPEG_BIN_FILES
 	"${FFMPEG_avcodec_INCLUDE_DIR}/../bin/avcodec-*.dll"
@@ -148,6 +149,9 @@ if (CMAKE_CONFIGURATION_TYPES MATCHES "Debug")
 		"${Qt5Core_DIR}/../../../bin/Qt5Cored.dll"
 		"${Qt5Core_DIR}/../../../bin/Qt5Guid.dll"
 		"${Qt5Core_DIR}/../../../bin/Qt5Widgetsd.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5Networkd.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5Multimediad.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5MultimediaWidgetsd.dll"
 		"${Qt5Core_DIR}/../../../bin/libGLESv2d.dll"
 		"${Qt5Core_DIR}/../../../bin/libEGLd.dll")
 	file(GLOB QT_DEBUG_PLAT_BIN_FILES
@@ -159,6 +163,9 @@ if (CMAKE_CONFIGURATION_TYPES MATCHES "Rel")
 		"${Qt5Core_DIR}/../../../bin/Qt5Core.dll"
 		"${Qt5Core_DIR}/../../../bin/Qt5Gui.dll"
 		"${Qt5Core_DIR}/../../../bin/Qt5Widgets.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5Network.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5Multimedia.dll"
+		"${Qt5Core_DIR}/../../../bin/Qt5MultimediaWidgets.dll"
 		"${Qt5Core_DIR}/../../../bin/libGLESv2.dll"
 		"${Qt5Core_DIR}/../../../bin/libEGL.dll")
 	file(GLOB QT_PLAT_BIN_FILES

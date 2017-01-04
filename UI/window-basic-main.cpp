@@ -118,7 +118,7 @@ static void AddExtraModulePaths()
 }
 
 static QList<QKeySequence> DeleteKeys;
-
+#include <qmediaplayer.h>
 OBSBasic::OBSBasic(QWidget *parent)
 	: OBSMainWindow  (parent),
 	  ui             (new Ui::OBSBasic)
@@ -126,6 +126,7 @@ OBSBasic::OBSBasic(QWidget *parent)
 	setAcceptDrops(true);
 
 	ui->setupUi(this);
+	QMediaPlayer player;
 	ui->previewDisabledLabel->setVisible(false);
 
 	copyActionsDynamicProperties();

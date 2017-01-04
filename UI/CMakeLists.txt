@@ -34,6 +34,7 @@ else()
 endif()
 
 find_package(Qt5Widgets ${FIND_MODE})
+find_package(Qt5Multimedia ${FIND_MODE})
 
 if(NOT Qt5Widgets_FOUND)
 	if (ENABLE_UI)
@@ -214,6 +215,7 @@ target_link_libraries(obs
 	libobs
 	libff
 	Qt5::Widgets
+	Qt5::Multimedia
 	obs-frontend-api
 	${LIBCURL_LIBRARIES}
 	${obs_PLATFORM_LIBRARIES})
